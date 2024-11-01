@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="grid12.css">
+    
+    <script src="jquery.js"></script>
+    <script>
+
+        $(function () {
+            $("#button1").click(function () {
+                $("#topmenu ul").slideToggle();
+                $("#cats").css("right", "-300px");
+            });
+
+            $("#button2").click(function () {
+                if ($("#cats").css("right") == "-300px") {
+                    $("#cats").css("right", "0");
+                    $("#topmenu ul").slideUp();
+                } else {
+                    $("#cats").css("right", "-300px");
+                }
+            });
+
+            $("#cats .plus").click(function (event) {
+                $(this).parent().siblings("ul").slideToggle();
+                event.preventDefault();
+            });
+
+            $(window).resize(function () {
+                if ($("#cats").css("width") != "300px") {
+                    $("#cats .submenu").slideUp();
+                }
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div id="topmenu">
+        <nav class="wrapper">
+            <ul>
+                <li><a href="#">خانه</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">ورود</a></li>
+                <li><a href="#">عضویت</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <img src="images/menuicon.png" alt="" id="button1">
+    <img src="images/menuicon.png" alt="" id="button2">
+
+    <header id="header">
+        <div class="wrapper">
+            <div class="row">
+                <div id="logo" class="col-xs-12 col-sm-4">
+                    <img src="images/icons8-shopping-cart-96.png" alt="" width="140" height="140">
+                </div>
+                <div id="search" class="col-xs-12 col-sm-8">
+                    <h1>فروشگاه آنلاین</h1>
+                    <form action="">
+                        <input type="search" name="search" placeholder="جستجو کنید">
+                        <input type="submit" value="جستجو">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="cats">
+        <ul>
+            <li class="item">
+                <a href="#">کالای دیجیتال<span class="plus">+</span></a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="#">موبایل<span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">Apple</a></li>
+                            <li class="subitem"><a href="#">Samsung</a></li>
+                            <li class="subitem"><a href="#">LG</a></li>
+                            <li class="subitem"><a href="#">HTC</a></li>
+                            <li class="subitem"><a href="#">sony</a></li>
+                            <li class="subitem"><a href="#">Huawei</a></li>
+                            <li class="subitem"><a href="#">Nokia</a></li>
+                            <li class="subitem"><a href="#">Asus</a></li>
+                            <li class="subitem"><a href="#">Lenovo</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="subitem">
+                        <a href="#">تبلت<span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">Apple</a></li>
+                            <li class="subitem"><a href="#">Samsung</a></li>
+                            <li class="subitem"><a href="#">LG</a></li>
+                            <li class="subitem"><a href="#">HTC</a></li>
+                            <li class="subitem"><a href="#">sony</a></li>
+                            <li class="subitem"><a href="#">Huawei</a></li>
+                            <li class="subitem"><a href="#">Nokia</a></li>
+                            <li class="subitem"><a href="#">Asus</a></li>
+                            <li class="subitem"><a href="#">Lenovo</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="subitem">
+                        <a href="#">لپتاپ<span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">Apple</a></li>
+                            <li class="subitem"><a href="#">Samsung</a></li>
+                            <li class="subitem"><a href="#">LG</a></li>
+                            <li class="subitem"><a href="#">HTC</a></li>
+                            <li class="subitem"><a href="#">sony</a></li>
+                            <li class="subitem"><a href="#">Huawei</a></li>
+                            <li class="subitem"><a href="#">Nokia</a></li>
+                            <li class="subitem"><a href="#">Asus</a></li>
+                            <li class="subitem"><a href="#">Lenovo</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="subitem">
+                        <a href="#">کامپیوتر و لوازم جانبی<span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">مادربرد</a></li>
+                            <li class="subitem"><a href="#">رم</a></li>
+                            <li class="subitem"><a href="#">پردازنده</a></li>
+                            <li class="subitem"><a href="#">نمایشگر</a></li>
+                            <li class="subitem"><a href="#">هارددیسک</a></li>
+                            <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                            <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                            <li class="subitem"><a href="#">کیس</a></li>
+                            <li class="subitem"><a href="#">کیبرد</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="item">
+                <a href="#">لوازم اداری<span class="plus">+</span></a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="#">لوازم التحریر<span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">خودکار</a></li>
+                            <li class="subitem"><a href="#">ماژیک</a></li>
+                            <li class="subitem"><a href="#">مداد</a></li>
+                            <li class="subitem"><a href="#">جامدادی</a></li>
+                            <li class="subitem"><a href="#">کیف</a></li>
+                            <li class="subitem"><a href="#">دفتر</a></li>
+                            <li class="subitem"><a href="#">کتاب</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+    </nav>
+
+
+    <main class="wrapper">
+        <div class="row">
+            <div id="content" class="col-xs-12 col-lg-9">
+                <section class="group row">
+                    <h2>پرفروش ها</h2>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/cpu.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/mobile.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 4</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/laptop.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 2.7</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/harddisk.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 4.5</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/tablet.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.8</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/monitor.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 2.5</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/laptop.png" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                </section>
+                
+                <section class="group row">
+                    <h2>جدیدترین ها</h2>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/cpu.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/harddisk.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/laptop.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/mobile.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/monitor.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/tablet.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/cpu.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="images/harddisk.png" alt="">
+                                    <span class="imagelabel">جدید</span>
+                                </div>
+                                <h3>لپتاپ 15 اینچی asus مدل B9ljiswf-dighhg</h3>
+                                <p class="rate">
+                                    <span><img class="star" src="images/icons8-star-48.png" alt=""> 3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">38900000  تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+            <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                <section class="group row">
+                    <h2>تخفیف ویژه</h2>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="images/laptop.png" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="popup">
+                                    <p class="comment">لپ تاپ مدل GHTYU</p>
+                                    <p class="price">3500000000 تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                
+                    <h2>تخفیف ویژه</h2>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="images/laptop.png" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="popup">
+                                    <p class="comment">لپ تاپ مدل GHTYU</p>
+                                    <p class="price">3500000000 تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                
+                    <h2>تخفیف ویژه</h2>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="images/laptop.png" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="popup">
+                                    <p class="comment">لپ تاپ مدل GHTYU</p>
+                                    <p class="price">3500000000 تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                
+                    <h2>تخفیف ویژه</h2>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="images/laptop.png" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="popup">
+                                    <p class="comment">لپ تاپ مدل GHTYU</p>
+                                    <p class="price">3500000000 تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+            </aside>
+        </div>
+    </main>
+
+</body>
+
+</html>
